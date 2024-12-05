@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+		   xmlns="http://www.iata.org/IATA/2007/00"
+		   targetNamespace="http://www.iata.org/IATA/2007/00"
+		   elementFormDefault="qualified">
+
+	<!-- Define a minimal IATA_PayloadStdAttributes attribute group -->
+	<xs:attributeGroup name="IATA_PayloadStdAttributes">
+		<xs:attribute name="Version" type="xs:string" use="required"/>
+		<xs:attribute name="Timestamp" type="xs:dateTime" use="optional"/>
+	</xs:attributeGroup>
+
+	<!-- Define the root element IATA_AIDX_FlightLegRQ -->
+	<xs:element name="IATA_AIDX_FlightLegRQ">
+		<xs:complexType>
+			<xs:sequence>
+				<!-- Define Airline element -->
+				<xs:element name="Airline" minOccurs="0">
+					<xs:complexType>
+						<xs:attribute name="Code" type="xs:string" use="optional"/>
+						<xs:attribute name="CodeContext" type="xs:string" use="optional"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+
+			<!-- Include the IATA_PayloadStdAttributes attribute group -->
+			<xs:attributeGroup ref="IATA_PayloadStdAttributes"/>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<IATA_AIDX_FlightLegRQ xmlns="http://www.iata.org/IATA/2007/00"
+                       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                       xsi:schemaLocation="http://www.iata.org/IATA/2007/00 IATA_AIDX_FlightLegRQ.xsd"
+                       Version="1.002">
+    <Airline Code="AA" CodeContext="002"/>
+</IATA_AIDX_FlightLegRQ>
